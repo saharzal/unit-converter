@@ -18,11 +18,43 @@
         </header>
         <div class="converter-body p-4">
             <div class="container">
-                <form class="d-flex flex-row justify-content-center">
-                    <label for="from">From: </label><br>
-                    <input type="text" id="from" name="fromf"><br>
-                    <label for="to"> To:</label><br>
-                    <input type="text" id="to" name="tof">
+                <form class="d-flex flex-row justify-content-center ">
+                    <div class="from-container mx-4">
+                        <label for="from" class="mx-2">From: </label><br>
+                        <input type="text" id="from" name="fromf"><br>
+                        <select class="form-select my-3" multiple aria-label="multiple select">
+                            <option selected>Meter</option>
+                            <option value="1">Kilometer</option>
+                            <option value="2">Centimeter</option>
+                            <option value="3">Milimeter</option>
+                            <option value="3">Milimeter</option>
+                            <option value="3">Micrometer</option>
+                            <option value="3">nanometer</option>
+                            <option value="3">Mile</option>
+                            <option value="3">Yard</option>
+                            <option value="3">Foot</option>
+                            <option value="3">Inch</option>
+                            <option value="3">Light year</option>
+                        </select>
+                    </div>
+                    <div class="to-container mx-4">
+                        <label for="to" class="mx-2">To:</label><br>
+                        <input type="text" id="to" name="tof" readonly>
+                        <select class="form-select my-3" multiple aria-label="multiple select">
+                            <option selected>Meter</option>
+                            <option value="1">Kilometer</option>
+                            <option value="2">Centimeter</option>
+                            <option value="3">Milimeter</option>
+                            <option value="3">Milimeter</option>
+                            <option value="3">Micrometer</option>
+                            <option value="3">nanometer</option>
+                            <option value="3">Mile</option>
+                            <option value="3">Yard</option>
+                            <option value="3">Foot</option>
+                            <option value="3">Inch</option>
+                            <option value="3">Light year</option>
+                        </select>
+                    </div>
                 </form>
             </div>
         </div>
