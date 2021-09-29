@@ -1,0 +1,14 @@
+:root {
+    --primary-color: hsl(0,100%,10%);
+    --background-color: #fafafa;
+}
+body {
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    background-color: var(--background-color);
+}
+.header {
+    background-color: var(--primary-color);
+    color: #fff;
+}
