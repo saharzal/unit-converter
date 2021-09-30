@@ -1,6 +1,8 @@
 :root {
     --primary-color: hsl(0,100%,10%);
     --background-color: #fafafa;
+    --button-color:hsl(0,100%,25%);
+    --button-hover-color:hsl(0,100%,20%);
 }
 body {
     padding: 0;
@@ -21,4 +23,8 @@ body {
     border: none;
     outline: none;
     border-radius: .2rem;
+    /* transition: all 0.2s; */
+}
+#convertbtn:hover {
+    background-color: var(--button-hover-color);
 }
