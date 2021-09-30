@@ -12,3 +12,13 @@ body {
     background-color: var(--primary-color);
     color: #fff;
 }
+#convertbtn{
+    margin: 1rem;
+    padding: 0.2rem 1rem;
+    background-color: hsl(0,100%,25%);
+    color: #fff;
+    font-size: 1.4rem;
+    border: none;
+    outline: none;
+    border-radius: .2rem;
+}
