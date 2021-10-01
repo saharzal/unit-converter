@@ -6,13 +6,15 @@ const testText2 = document.querySelector("#testText2");
 const fromUnit = document.querySelector("#fromUnit");
 const toUnit = document.querySelector("#toUnit");
 
-// convertBtn.onclick = function(){
-    
-// }
-convertBtn.addEventListener('click',()=>{
+convertBtn.onclick = function(){
     toInput.value = "23";
-    convertToMeter();
-});
+    let fromVal;
+    if(fromUnit.value != 'meter')
+        fromVal = convertToMeter();
+    else
+        fromVal = fromInput.value;
+    console.log(fromVal);
+}
 
 function convertToMeter(){
     const fromU = fromUnit.value;
@@ -45,5 +47,6 @@ function convertToMeter(){
             meterVal = fromValue*0.0254 ;
             break;
     }
-    console.log(meterVal);
+    
+    return meterVal;
 }
