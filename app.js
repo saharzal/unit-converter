@@ -7,21 +7,20 @@ const fromUnit = document.querySelector("#fromUnit");
 const toUnit = document.querySelector("#toUnit");
 
 convertBtn.onclick = function(){
-    toInput.value = "23";
-    let fromVal;
-    if(fromUnit.value != 'meter')
-        fromVal = convertToMeter();
-    else
-        fromVal = fromInput.value;
-    console.log(fromVal);
+    let fromVal = 0 , finalVal = 0;
+    fromVal = convertToMeter();
+    finalVal = convertToFinal(fromVal);
+    console.log(finalVal);
+    toInput.value = finalVal;
 }
-
-function convertToMeter(){
+const convertToMeter = () => {
     const fromU = fromUnit.value;
-    const toU = toUnit.value;
     const fromValue = fromInput.value; 
     let meterVal = 0;
-    switch(fromUnit.value){
+    switch(fromU){
+        case 'meter':
+            meterVal = fromValue;
+            break;
         case 'kilo':
             meterVal = fromValue*1000 ;
             break;
@@ -43,10 +42,45 @@ function convertToMeter(){
         case 'mile':
             meterVal = fromValue*1609.34 ;
             break;
-        case 'mile':
+        case 'inch':
             meterVal = fromValue*0.0254 ;
             break;
     }
     
     return meterVal;
+}
+
+const convertToFinal = (val)=> {
+    const toU = toUnit.value;
+    let finalVal = 0;
+    switch(toU){
+        case 'meter':
+            finalVal = val ;
+            break;
+        case 'kilo':
+            finalVal = val*0.001 ;
+            break;
+        case 'centi':
+            finalVal = val*100 ;
+            break;
+        case 'mili':
+            finalVal = val*1000 ;
+            break;
+        case 'micro':
+            finalVal = val*1000000 ;
+            break;
+        case 'foot':
+            finalVal = val*3.28084 ;
+            break;
+        case 'yard':
+            finalVal = val*1.09361 ;
+            break;
+        case 'mile':
+            finalVal = val*0.000621371 ;
+            break;
+        case 'inch':
+            finalVal = val*39.3701 ;
+            break;
+    }
+    return finalVal;
 }
